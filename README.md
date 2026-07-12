@@ -1,40 +1,138 @@
-#  MyWallet - E-Wallet Platform
+#  E-Wallet System
 
-A comprehensive E-Wallet platform built with **Laravel**, designed for secure financial transactions, efficient withdrawal management, and an engaging user experience.
-
----
-
-##  Tech Stack
-
-### **Backend**
-* **Laravel 13**: The core PHP framework.
-* **PHP 8.4**: Server-side language.
-* **Stripe SDK & Laravel Cashier**: For secure payment processing and financial integration.
-* **Database**: MySQL.
-
-### **Frontend**
-* **Tailwind CSS**: Utility-first CSS framework for a responsive, modern UI.
-* **FontAwesome**: Extensive icon library used throughout the dashboard and landing page.
-* **Vite**: Asset bundling and development server.
-* **Blade Templating**: Efficient view rendering engine.
-
-### **Authentication & Utilities**
-* **Custom Middleware**: For managing admin/user access and financial transaction logic.
+<p align="center">
+  <h3 align="center">Digital Wallet Management System</h3>
+  <p align="center">
+    Laravel • REST API • MySQL
+  </p>
+</p>
 
 ---
 
-##  Getting Started
+##  Overview
+
+**E-Wallet System** is a secure digital wallet application built with **Laravel**. It allows users to manage their wallet balances, transfer funds, top up their accounts, and request withdrawals through a RESTful API. The project follows clean architecture principles and provides a solid foundation for building fintech applications.
+
+---
+
+##  Features
+
+* User Authentication & Authorization
+* Digital Wallet Management
+* Wallet Balance Tracking
+* Money Transfers Between Users
+* Top-Up Requests
+* Withdrawal Requests
+* Transaction History
+* RESTful API
+* Secure Validation & Error Handling
+* Admin Management
+
+---
+
+##  Built With
+
+* Laravel
+* PHP
+* MySQL
+* REST API
+* Composer
+* JavaScript
+* Bootstrap
+* Vite
+
+---
+
+##  Project Structure
+
+```text
+E-wallet/
+│
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── public/
+├── resources/
+├── routes/
+├── storage/
+├── tests/
+├── composer.json
+├── package.json
+├── artisan
+└── README.md
+```
+
+---
+
+##  Getting Started
+
+### Clone the repository
 
 ```bash
-# Clone the repository
-git clone <repository-url>
+git clone https://github.com/MohamedKhaled31/E-wallet.git
+```
 
-# Install PHP dependencies
+### Navigate to the project
+
+```bash
+cd E-wallet
+```
+
+### Install dependencies
+
+```bash
 composer install
-
-# Install JS dependencies
 npm install
+```
 
-# Setup environment file
+### Configure environment
+
+```bash
 cp .env.example .env
 php artisan key:generate
+```
+
+Update your database credentials inside the `.env` file.
+
+### Run migrations
+
+```bash
+php artisan migrate
+```
+
+### Start the development server
+
+```bash
+php artisan serve
+```
+
+For frontend assets:
+
+```bash
+npm run dev
+```
+
+---
+
+##  Main Modules
+
+* Authentication
+* Users Management
+* Wallet Management
+* Transactions
+* Money Transfers
+* Top-Up Operations
+* Withdrawal Requests
+* Admin Dashboard
+
+---
+
+##  Author
+
+**Mohamed Khaled**
+
+GitHub:
+https://github.com/MohamedKhaled31
