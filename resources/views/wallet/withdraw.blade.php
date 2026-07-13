@@ -3,6 +3,17 @@
 @section('title', 'Withdraw Funds')
 
 @section('content')
+
+    @if ($errors->any())
+        <div class="bg-red-50 text-red-600 p-4 rounded-xl text-xs mb-4">
+            <ul class="list-disc pl-4">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    
     <div class="max-w-xl mx-auto py-10">
         <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
             <h2 class="text-2xl font-bold mb-6">Withdraw Funds</h2>
