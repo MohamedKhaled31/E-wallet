@@ -5,9 +5,10 @@ use App\Http\Controllers\AdminWithdrawalController;
 use App\Http\Controllers\WithdrawController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', [LandingController::class, 'home'])->name('landing');
+
 // --- Guest Routes ---
 Route::middleware('guest')->group(function () {
-    Route::get('/', [LandingController::class, 'home'])->name('landing');
     Route::get('/login', [AuthController::class, 'showLogin'])->name('login.show');
     Route::post('/login', [AuthController::class, 'login'])->name('login');
     Route::get('/register', [AuthController::class, 'showRegister'])->name('register.show');
@@ -19,7 +20,7 @@ Route::middleware(['auth', 'user'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
     //Route::get('/', function () {
-       // return redirect()->route('wallet.index');
+    // return redirect()->route('wallet.index');
     //});
 
     Route::get('/wallet', [WalletController::class, 'index'])->name('wallet.index');
