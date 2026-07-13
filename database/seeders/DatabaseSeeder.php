@@ -11,7 +11,6 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // 1. إنشاء حساب الآدمن (Admin)
         $admin = User::create([
             'name' => 'Admin',
             'email' => 'admin@wallet.com',
@@ -22,8 +21,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $user1 = User::create([
-            'name' => 'Amr Khaled',
-            'email' => 'amr@wallet.com',
+            'name' => 'User ',
+            'email' => 'User@wallet.com',
             'phone' => '01111111111',
             'password' => Hash::make('123456'),
             'role' => 'user',
